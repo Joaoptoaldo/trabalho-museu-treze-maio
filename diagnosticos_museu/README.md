@@ -13,8 +13,18 @@ Conjunto de consultas SQL utilizadas na investigação do banco `museutrezemaio2
 | `validacao/05_limites_numericos.sql` | Verifica os intervalos numéricos documentados nos dados existentes | Somente leitura |
 | `validacao/06_dominios_textuais.sql` | Lista os valores existentes em `tipo`, `status` e `idioma` | Somente leitura |
 | `validacao/07_teste_dominios_textuais.sql` | Testa a inserção de valores textuais fora dos valores observados | Cria e remove uma tabela temporária |
+| `validacao/08_diagnostico_relacionamentos_nn.sql` | Diagnostica relacionamentos sem NOT NULL | Somente leitura |
+| `validacao/09_teste_duplicidade_pre_melhoria.sql` | Testa duplicidade antes da melhoria | Cria e remove tabela temporária |
+| `validacao/10_validacao_pk_composta_nn.sql` | Valida chave primária composta com NOT NULL | Somente leitura |
+
 | `melhorias/01-restricoes/melhoria_restricoes.sql` | Aplica restrições CHECK ao schema de teste | Cria/Altera (DDL) |
 | `testes/teste_fragilidade.sql` | Avalia a fragilidade de regras ao inserir valores fora do padrão | Cria e remove tabelas temporárias (teste) |
+| `melhorias/02-relacionamentos-nn/melhoria_chaves_compostas.sql` | Testa restrições de chaves compostas | Cria/Altera (DDL) |
+| `melhorias/02-relacionamentos-nn/melhoria_chave_composta_item_acervo_colaborador.sql` | Testa restrição de chave composta em item_acervo_colaborador | Cria/Altera (DDL) |
+| `testes/evidencia_teste_fragilidade.png` | Evidência visual do teste de fragilidade | Imagem |
+| `testes/teste_bloqueio_duplicidade_item_acervo_colaborador.sql` | Testa bloqueio de duplicidade no item_acervo_colaborador | Cria e remove tabelas temporárias (teste) |
+| `testes/teste_bloqueio_duplicidade_nn.sql` | Testa bloqueio de duplicidade em coluna NOT NULL | Cria e remove tabelas temporárias (teste) |
+| `testes/teste_nova_relacao.sql` | Testa criação de nova relação entre tabelas | Cria e remove tabelas temporárias (teste) |
 
 ## Resultados
 
